@@ -1,6 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:personal_shopper/shared/appbar_widget.dart';
+import 'package:bweird_flutter_toolkit/shared/components/appbar_widget.dart';
 
 class CameraApp extends StatefulWidget {
   @override

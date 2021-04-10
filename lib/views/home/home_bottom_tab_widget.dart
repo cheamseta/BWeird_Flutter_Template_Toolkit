@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:personal_shopper/controllers/tab_index_controller.dart';
-import 'package:personal_shopper/themes/color.dart';
+import 'package:bweird_flutter_toolkit/controllers/tab_index_controller.dart';
+import 'package:bweird_flutter_toolkit/themes/color.dart';
 import 'package:get/get.dart';
 
 // ignore: must_be_immutable
@@ -25,18 +25,16 @@ class HomeBottomTabWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
     return Obx( () =>
       BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart_outlined),
-            label: 'ទំនិញភ្ញៀវកម្មង',
+            icon: Icon(Icons.list),
+            label: 'TO DO',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.comment_bank_outlined),
-            label: 'បញ្ចេញមតិទូទោ',
+            icon: Icon(Icons.person),
+            label: 'PROFILE',
           )
         ],
         currentIndex:  navController.selectedBodyIndex,

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:personal_shopper/controllers/user_controller.dart';
-import 'package:personal_shopper/models/user_model.dart';
-import 'package:personal_shopper/services/user_http_services.dart';
-import 'package:personal_shopper/shared/form_text_widget.dart';
-import 'package:personal_shopper/themes/color.dart';
-import 'package:personal_shopper/themes/text_style.dart';
+import 'package:bweird_flutter_toolkit/controllers/user_controller.dart';
+import 'package:bweird_flutter_toolkit/models/user_model.dart';
+import 'package:bweird_flutter_toolkit/services/user_http_services.dart';
+import 'package:bweird_flutter_toolkit/shared/components/form_text_widget.dart';
+import 'package:bweird_flutter_toolkit/themes/color.dart';
+import 'package:bweird_flutter_toolkit/themes/text_style.dart';
 
 // ignore: must_be_immutable
 class LoginScreen extends StatelessWidget {
@@ -27,11 +27,11 @@ class LoginScreen extends StatelessWidget {
                           SizedBox(height: 100),
                           logoImageWidget(),
                           SizedBox(height: 50),
-                          formLabelWidget("ឈ្មោះ ៖"),
+                          formLabelWidget("Username :"),
                           FormTextWidget(),
                           Divider(),
                           SizedBox(height: 20),
-                          formLabelWidget("ពាក្យសំងាត់ ៖"),
+                          formLabelWidget("Password :"),
                           FormTextWidget(),
                           Divider(),
                           SizedBox(height: 20),
@@ -45,9 +45,8 @@ class LoginScreen extends StatelessWidget {
       children: [
         ClipRRect(
             borderRadius: BorderRadius.circular(8.0),
-            child: Image.asset("assets/images/icon.png", width: 100)),
-        SizedBox(height: 20),
-        formLabelWidget("Personal Shopper")
+            child: Image.asset("assets/images/logo.png", width: 200)),
+        SizedBox(height: 20)
       ],
     ));
   }
@@ -61,7 +60,7 @@ class LoginScreen extends StatelessWidget {
       onPressed: () => userLoginEvent(),
       child: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Text("ចុះឈ្មោះចូល",
+          child: Text("LOGIN",
               style: TextSt.textSyleInColorSize(ColorTheme.COLOR_LIGHT, 20))),
     ));
   }
@@ -72,14 +71,7 @@ class LoginScreen extends StatelessWidget {
   }
 
   Future<void> userLoginEvent() async {
-    
-    Map userLogin = {"username": "god", "password": "god"};
-
-    final resp = await UserHttpService.userLoginAuthentication(userLogin);
-
-    if (resp != null) {
-      UserModel loginUser = UserModel.getCurrentUser();
-      userController.mUser(loginUser);
-    }
+    UserModel loginUser = UserModel.getCurrentUser();
+    userController.mUser(loginUser);
   }
 }

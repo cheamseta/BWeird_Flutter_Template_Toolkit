@@ -1,4 +1,4 @@
-name: personal_shopper
+name: bweird_flutter_toolkit
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -15,7 +15,6 @@ dependencies:
     sdk: flutter
   get:
   json_annotation: ^3.1.0
-  qr_code_scanner: ^0.4.0
   camera: ^0.8.1
   get_storage: ^2.0.2
   shared_preferences: ^2.0.5
@@ -49,7 +48,6 @@ flutter:
   assets:
     - assets/
     - assets/images/
-    - assets/data/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -63,9 +61,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Khmer
+    - family: WorkSans
       fonts:
-        - asset: assets/fonts/NotoSansKhmer.ttf
+        - asset: assets/fonts/WorkSans-Light.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

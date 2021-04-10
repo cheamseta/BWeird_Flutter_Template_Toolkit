@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:personal_shopper/themes/color.dart';
-import 'package:personal_shopper/themes/text_style.dart';
+import 'package:bweird_flutter_toolkit/themes/color.dart';
+import 'package:bweird_flutter_toolkit/themes/text_style.dart';
 
 class FormTextWidget extends StatelessWidget {
 

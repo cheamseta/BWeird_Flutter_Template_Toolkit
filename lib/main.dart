@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:personal_shopper/views/home/home_view.dart';
-import 'package:personal_shopper/views/login/login_view.dart';
-
+import 'package:bweird_flutter_toolkit/views/home/home_view.dart';
+import 'package:bweird_flutter_toolkit/views/login/login_view.dart';
 
 import 'controllers/user_controller.dart';
 import 'models/user_model.dart';
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Karot Personal Shopper',
+      title: 'Flutter Template Toolkit',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

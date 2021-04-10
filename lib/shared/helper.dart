@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:personal_shopper/themes/color.dart';
-import 'package:personal_shopper/themes/text_style.dart';
+import 'package:bweird_flutter_toolkit/themes/color.dart';
+import 'package:bweird_flutter_toolkit/themes/text_style.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Helper {
@@ -32,7 +32,7 @@ class Helper {
           actions: <Widget>[
             isConfirmCallback != null
                 ? TextButton(
-                    child: Text('ទទួលយក',
+                    child: Text('Okay',
                         style: TextSt.textSyleInColorSize(
                             ColorTheme.COLOR_PRIMARY, 20)),
                     onPressed: () {
@@ -41,7 +41,7 @@ class Helper {
                   )
                 : null,
             TextButton(
-              child: Text('ចាកចេញ',
+              child: Text('Cancel',
                   style: TextSt.textSyleInColorSize(ColorTheme.COLOR_GREY, 20)),
               onPressed: () {
                 Navigator.of(context).pop();

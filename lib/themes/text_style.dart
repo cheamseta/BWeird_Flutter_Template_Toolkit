@@ -5,7 +5,7 @@ class TextSt {
 
   static TextStyle textSyleInColorSize(Color color, double fontSize) {
     return TextStyle(
-      fontFamily: 'Khmer',
+      fontFamily: 'WorkSans',
       fontWeight: FontWeight.w500,
       fontSize: fontSize,
       letterSpacing: 0.27,
